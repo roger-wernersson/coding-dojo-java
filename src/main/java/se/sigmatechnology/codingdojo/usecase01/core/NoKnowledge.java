@@ -6,8 +6,6 @@ package se.sigmatechnology.codingdojo.usecase01.core;
  */
 public class NoKnowledge implements Knowledge {
 
-	public static Knowledge NONE = new NoKnowledge();
-	
 	NoKnowledge() {}
 
 	@Override

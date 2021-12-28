@@ -1,9 +1,6 @@
 package se.sigmatechnology.codingdojo.usecase01.usecases;
 
-import se.sigmatechnology.codingdojo.usecase01.core.Agent;
-import se.sigmatechnology.codingdojo.usecase01.core.AgentRepository;
-import se.sigmatechnology.codingdojo.usecase01.core.Knowledge;
-import se.sigmatechnology.codingdojo.usecase01.core.Subject;
+import se.sigmatechnology.codingdojo.usecase01.core.*;
 
 /**
  * Use Case
@@ -12,17 +9,17 @@ import se.sigmatechnology.codingdojo.usecase01.core.Subject;
  */
 public class AskAgent {
 
-	private final String agentName;
+	private final AgentName agentName;
 	private final Subject subject;
 	
-	public AskAgent(String agentName, Subject subject) {
+	public AskAgent(AgentName agentName, Subject subject) {
 		this.agentName = agentName;
 		this.subject = subject;
 	}
 	
 	public Knowledge execute(AgentRepository repo) {
-		Agent agent = repo.findByName(agentName);
-		
-		return agent.knowledgeFromSubject(subject);
+		return repo
+				.findByName(agentName)
+				.knowledgeFromSubject(subject);
 	}
 }

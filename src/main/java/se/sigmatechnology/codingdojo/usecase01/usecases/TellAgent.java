@@ -1,8 +1,6 @@
 package se.sigmatechnology.codingdojo.usecase01.usecases;
 
-import se.sigmatechnology.codingdojo.usecase01.core.Agent;
-import se.sigmatechnology.codingdojo.usecase01.core.AgentRepository;
-import se.sigmatechnology.codingdojo.usecase01.core.Secret;
+import se.sigmatechnology.codingdojo.usecase01.core.*;
 
 /**
  * Use Case
@@ -11,10 +9,10 @@ import se.sigmatechnology.codingdojo.usecase01.core.Secret;
  */
 public class TellAgent {
 
-	private final String agentName;
+	private final AgentName agentName;
 	private final Secret secret;
 	
-	public TellAgent(String agentName, Secret secret) {
+	public TellAgent(AgentName agentName, Secret secret) {
 		this.agentName = agentName;
 		this.secret = secret;
 	}
