@@ -6,7 +6,7 @@ package se.sigmatechnology.codingdojo.usecase01.core;
  */
 public interface Knowledge {
 
-	static Knowledge NONE = new NoKnowledge();
+	Knowledge NONE = new NoKnowledge();
 
 	String asText();
 }
