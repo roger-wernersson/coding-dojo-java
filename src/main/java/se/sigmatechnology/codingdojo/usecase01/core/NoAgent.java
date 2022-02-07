@@ -1,7 +1,5 @@
 package se.sigmatechnology.codingdojo.usecase01.core;
 
-import se.sigmatechnology.codingdojo.usecase01.core.*;
-
 public class NoAgent implements Agent {
 
     @Override

@@ -3,8 +3,6 @@ package se.sigmatechnology.codingdojo.usecase01.core;
 import java.util.ArrayList;
 import java.util.List;
 
-import static se.sigmatechnology.codingdojo.usecase01.core.Knowledge.NONE;
-
 /**
  * Immutable root aggregate
  * @author rwe

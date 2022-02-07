@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SecretTest {
+class SecretShould {
 
     private static final Subject subjectAlias = new Subject("alias");
     private static final Subject subjectName = new Subject("name");
@@ -12,7 +12,7 @@ class SecretTest {
     private static final Knowledge knowledgeSun = new KnowledgeWithText("sun");
 
     @Test
-    void isOnCorrectSubject() {
+    void haveCorrectSubject() {
         var secret = new Secret(subjectAlias, knowledgeMoon);
 
         assertTrue(secret.isOnSubject(subjectAlias), "is on right subject");
@@ -20,7 +20,7 @@ class SecretTest {
     }
 
     @Test
-    void hasKnowledge() {
+    void haveKnowledge() {
         var secret = new Secret(subjectAlias, knowledgeMoon);
 
         assertEquals(knowledgeMoon, secret.getKnowledge());
