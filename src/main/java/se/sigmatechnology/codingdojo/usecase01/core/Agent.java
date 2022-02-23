@@ -1,5 +1,7 @@
 package se.sigmatechnology.codingdojo.usecase01.core;
 
+import se.sigmatechnology.codingdojo.usecase01.usecases.Goal;
+
 public interface Agent {
 
     Agent NONE = new NoAgent();
@@ -9,4 +11,8 @@ public interface Agent {
     Knowledge knowledgeFromSubject(Subject subject);
 
     AgentName getName();
+
+    Agent plusGoal(Goal goal);
+
+    boolean hasGoal(Goal goal);
 }
