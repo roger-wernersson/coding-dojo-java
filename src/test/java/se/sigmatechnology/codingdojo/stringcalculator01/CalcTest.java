@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 public class CalcTest {
 
-	private int random1 = getRandomValue();
+	private final int random1 = getRandomValue();
 	
 	@Test
 	public void addEmptyStringReturnsZero() {
