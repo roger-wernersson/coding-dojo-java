@@ -2,19 +2,19 @@ package se.sigmatechnology.codingdojo.datamapper01;
 
 public class Field {
     private final String key;
-    private final FieldList.ValueType type;
+    private final FieldPack.ValueType type;
     private String text;
     private int integer;
 
     public Field(String key, String text) {
         this.key = key;
-        this.type = FieldList.ValueType.Text;
+        this.type = FieldPack.ValueType.Text;
         this.text = text;
     }
 
     public Field(String key, int integer) {
         this.key = key;
-        this.type = FieldList.ValueType.Integer;
+        this.type = FieldPack.ValueType.Integer;
         this.integer = integer;
     }
 
@@ -22,7 +22,7 @@ public class Field {
         return key;
     }
 
-    public FieldList.ValueType getValueType() {
+    public FieldPack.ValueType getValueType() {
         return type;
     }
 

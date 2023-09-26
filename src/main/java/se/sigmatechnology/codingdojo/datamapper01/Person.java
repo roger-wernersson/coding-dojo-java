@@ -1,7 +1,5 @@
 package se.sigmatechnology.codingdojo.datamapper01;
 
-import java.util.List;
-
 public class Person {
     private final Field idField;
     private final Field nameField;
@@ -11,17 +9,17 @@ public class Person {
         this.nameField = new Field("name", "");
     }
 
-    public Person(Field idField, Field nameField) {
-        this.idField = new Field("id", idField.getAsInteger());
-        this.nameField = new Field("name", nameField.getAsText());
+    public Person(FieldPack fields) {
+        this.idField = fields.getByName("id");
+        this.nameField = fields.getByName("name");
     }
 
     public int getId() {
         return idField.getAsInteger();
     }
 
-    public void addFieldsTo(List<Field> list) {
-        list.add(idField);
-        list.add(nameField);
+    public void addFieldsTo(FieldPack fields) {
+        fields.add(idField);
+        fields.add(nameField);
     }
 }

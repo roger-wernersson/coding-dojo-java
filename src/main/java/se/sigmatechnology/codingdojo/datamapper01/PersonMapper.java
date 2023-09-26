@@ -3,6 +3,11 @@ package se.sigmatechnology.codingdojo.datamapper01;
 public class PersonMapper {
 
     private final PersonMap map = new PersonMap();
+    private final Storage storage;
+
+    public PersonMapper(Storage storage) {
+        this.storage = storage;
+    }
 
     public Person find(int id) {
         Person old = map.find(id);
@@ -11,16 +16,15 @@ public class PersonMapper {
     }
 
     private Person loadPerson(int id) {
+        FieldPack fields = storage.load(RepoName.PERSON);
         // load from storage
-        return new Person(
-                new Field("id", 0),
-                new Field("name", "Batman")
-        );
+        return new Person(fields);
     }
 
     public void update(Person person) {
 
-//        person.addFieldsTo(fields);
-        // save to storage
+        FieldPack fields = new FieldPack(RepoName.PERSON);
+        person.addFieldsTo(fields);
+        storage.store(fields);
     }
 }
